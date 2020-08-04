@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="vm"
+            type="com.example.myapplication.ListViewVM"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/namaSiswa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={vm.namaSiswa}"/>
+
+            <TextView
+                android:id="@+id/npmSiswa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={vm.npmSiswa}"/>
+
+            <TextView
+                android:id="@+id/noHpSiswa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={vm.noHpSiswa}"/>
+
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_delete" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
